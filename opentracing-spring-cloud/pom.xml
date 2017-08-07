@@ -51,13 +51,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jms</artifactId>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>javax.jms</groupId>
-      <artifactId>javax.jms-api</artifactId>
+      <groupId>io.opentracing.contrib</groupId>
+      <artifactId>opentracing-jms-spring</artifactId>
       <optional>true</optional>
     </dependency>
     <dependency>
