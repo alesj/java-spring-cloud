@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 import io.opentracing.contrib.spring.web.autoconfig.WebTracingConfiguration;
 import io.opentracing.mock.MockTracer;
 import io.opentracing.mock.MockTracer.Propagator;
-import io.opentracing.util.ThreadLocalActiveSpanSource;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
@@ -22,7 +21,7 @@ public class MockTracingConfiguration {
 
   @Bean
   public MockTracer mockTracer() {
-    return new MockTracer(new ThreadLocalActiveSpanSource(), Propagator.TEXT_MAP);
+    return new MockTracer(Propagator.TEXT_MAP);
   }
 
   @Bean
